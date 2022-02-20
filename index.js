@@ -35,9 +35,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(bodyParser.json());
 
-app.listen(PORT, () => {
-  console.log(`App listening on ${PORT}`);
-});
+
 
 // app.post("/api/uploadFile", upload.single("myFile"), (req, res) => {
 //   // Stuff to be added later
@@ -63,3 +61,6 @@ const connectDB = async () => {
 
 connectDB()
 
+app.listen(PORT, () => {
+  console.log(`App listening on ${PORT}`);
+});
