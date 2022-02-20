@@ -28,12 +28,13 @@ function base64_encode(file) {
 }
 
 route.get('/', function(req,res){
-    Image.find({}, function(err,docs){
-        if(err) res.json(err);
-        else
-        res.send(docs)
+  res.send("Hello")
+    // Image.find({}, function(err,docs){
+    //     if(err) res.json(err);
+    //     else
+    //     res.send(docs)
 
-    })
+    // })
 })
 var l;var x;
 const conv = (url) =>{
