@@ -15,7 +15,7 @@ const upload = multer({ dest: "public/files" });
 let cors = require("cors");
 app.use(cors());
 const corsOptions = {
-  origin: "http://localhost:3000"
+  origin: "https://frosty-lumiere-178f71.netlify.app"
 };
 const requestEndpoint = "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.apple.com";
 app.get('/getData', cors(corsOptions), async (req, res) => {
