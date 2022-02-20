@@ -87,16 +87,20 @@ const fn = (pay) =>{
     const data = req.body;
     var xyz;
     console.log(req.body)
-    const valu = "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www."+ data.img +".com&size=128"
+    const valu = "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www."+ data.img +".com&size=64"
     request.get(valu, function (error, response, body) {
       var s;
       if (!error && response.statusCode == 200) {
           s = "data:" + response.headers["content-type"] + ";base64," + Buffer.from(body).toString('base64');
           x = s;
+        
           res.send(JSON.stringify({key:s}))
           
       }
-      s = undefined;
+      else{
+        res.send(JSON.stringify({key:"Not Found"}))
+      }
+      // s = undefined;
     });
     // console.log("xyz=",x)
     
