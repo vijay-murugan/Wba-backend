@@ -4,7 +4,7 @@
   "description": "Backend for the whiteboard app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "client": "yarn start --prefix ../app",
     "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run client\"",
     "build": "npm run start "
