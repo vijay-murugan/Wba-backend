@@ -7,7 +7,7 @@
     "start": "nodemon index.js",
     "client": "yarn start --prefix ../app",
     "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run client\"",
-    "build": "npm run build "
+    "build": "npm run start "
   },
   "proxy": "http://localhost:5000/",
   "author": "Vijay Murugan A S",
