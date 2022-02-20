@@ -9,7 +9,7 @@
     "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run client\""
     
   },
-  "proxy": "http://localhost:5000/",
+  "proxy": "https://frosty-lumiere-178f71.netlify.app/images/",
   "author": "Vijay Murugan A S",
   "license": "ISC",
   "dependencies": {

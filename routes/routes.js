@@ -44,7 +44,7 @@ const conv = (url) =>{
         s = "data:" + response.headers["content-type"] + ";base64," + Buffer.from(body).toString('base64');
         
         x = s;
-        //  console.log(x);
+        // console.log(x);
         
     }
    
