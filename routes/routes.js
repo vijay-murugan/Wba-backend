@@ -85,12 +85,13 @@ const fn = (pay) =>{
 
   route.post('/api/tmp',jsonParser,(req,res) => {
     const data = req.body;
-    var xyz;
+    
     console.log(req.body)
-    const valu = "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www."+ data.img +".com&size=64"
+    const valu = "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www."+ data.img +".com&size=128"
     request.get(valu, function (error, response, body) {
       var s;
-      if (!error && response.statusCode == 200) {
+      
+     if (!error && response.statusCode == 200) {
           s = "data:" + response.headers["content-type"] + ";base64," + Buffer.from(body).toString('base64');
           x = s;
         
