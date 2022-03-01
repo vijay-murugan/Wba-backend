@@ -17,7 +17,7 @@ app.use(cors());
 const corsOptions = {
   origin: "https://frosty-lumiere-178f71.netlify.app"
 };
-const requestEndpoint = "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.apple.com";
+
 app.get('/getData', cors(corsOptions), async (req, res) => {
   const fetchOptions = {
       method: 'GET'
@@ -58,6 +58,11 @@ const connectDB = async () => {
     process.exit();
   }
 };
+
+app.use(express.static('./client/build'))
+app.get('*', (req,res)=>{
+  res.sendFile(path.resolve(__dirname,'client', 'build', 'index.html'))
+})
 
 connectDB()
 
